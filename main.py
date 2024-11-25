@@ -1,30 +1,9 @@
+# Archivo: main.py
 
+from menu import mostrar_menu
 
+# Llama a la función mostrar_menu()
+opcion_seleccionada = mostrar_menu()
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-# main.py
-from operaciones import sumar, restar, multiplicar
-
-def main():
-    # Ejemplo de uso de las funciones
-    a = 5
-    b = 3
-
-    print(f"Suma: {sumar(a, b)}")
-    print(f"Resta: {restar(a, b)}")
-    print(f"Multiplicación: {multiplicar(a, b)}")
-
-if __name__ == "__main__":
-    main()
+# Muestra la opción seleccionada
+print(f"Has seleccionado la opción: {opcion_seleccionada}")
