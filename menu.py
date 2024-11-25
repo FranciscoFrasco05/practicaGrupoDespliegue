@@ -1,5 +1,5 @@
 # menu.py
-from operaciones import sumar, restar, multiplicar
+from operaciones import sumar, restar, multiplicar, dividir
 
 def mostrar_menu():
     print("Selecciona una opción:")
