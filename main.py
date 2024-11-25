@@ -1,9 +1,13 @@
-# Archivo: main.py
+# main.py
+from menu import mostrar_menu, ejecutar_operacion
 
-from menu import mostrar_menu
+def main():
+    while True:
+        opcion = mostrar_menu()
+        resultado = ejecutar_operacion(opcion)
+        print(f"Resultado: {resultado}")
+        if opcion == "5":
+            break
 
-# Llama a la función mostrar_menu()
-opcion_seleccionada = mostrar_menu()
-
-# Muestra la opción seleccionada
-print(f"Has seleccionado la opción: {opcion_seleccionada}")
+if __name__ == "__main__":
+    main()
