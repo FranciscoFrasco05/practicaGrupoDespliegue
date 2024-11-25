@@ -1,21 +1,46 @@
-# Archivo: menu.py
+# menu.py
+from operaciones import sumar, restar, multiplicar
 
 def mostrar_menu():
-    """
-    Muestra un menú de opciones por consola y solicita al usuario que seleccione una opción.
-    """
-    print("Menú de opciones:")
+    print("Selecciona una opción:")
     print("1 - Sumar")
     print("2 - Restar")
     print("3 - Multiplicar")
     print("4 - Dividir")
     print("5 - Salir")
-    
-    # Solicitar al usuario una opción y almacenarla
-    opcion = input("Seleccione una opción (1-5): ")
-    
-    # Retorna la opción seleccionada como entero si es válida, o como cadena para otras entradas.
+
+    opcion = input("Introduce el número de la opción: ")
+    return opcion
+
+def ejecutar_operacion(opcion):
     try:
-        return int(opcion)
+        if opcion == "1":
+            # Sumar
+            a = input("Introduce el primer valor: ")
+            b = input("Introduce el segundo valor: ")
+            a, b = float(a), float(b)  # Convertir a float
+            return sumar(a, b)
+        elif opcion == "2":
+            # Restar
+            a = input("Introduce el primer valor: ")
+            b = input("Introduce el segundo valor: ")
+            a, b = float(a), float(b)  # Convertir a float
+            return restar(a, b)
+        elif opcion == "3":
+            # Multiplicar
+            a = input("Introduce el primer valor: ")
+            b = input("Introduce el segundo valor: ")
+            a, b = float(a), float(b)  # Convertir a float
+            return multiplicar(a, b)
+        elif opcion == "4":
+            # Dividir (funcionalidad implementada por B)
+            a = input("Introduce el primer valor: ")
+            b = input("Introduce el segundo valor: ")
+            a, b = float(a), float(b)  # Convertir a float
+            return dividir(a, b)
+        elif opcion == "5":
+            return "Salir"
+        else:
+            return "Opción no válida"
     except ValueError:
-        return opcion
+        return "Error: Ambos valores deben ser numéricos (int o float)."
