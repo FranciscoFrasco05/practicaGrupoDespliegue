@@ -1,5 +1,5 @@
 # menu.py
-from operaciones import sumar, restar, multiplicar, dividir, factorial_iterativo
+from operaciones import sumar, restar, multiplicar
 
 def mostrar_menu():
     print("Selecciona una opción:")
@@ -8,7 +8,7 @@ def mostrar_menu():
     print("3 - Multiplicar")
     print("4 - Dividir")
     print("5 - Salir")
-    print("6 - Calcular el factorial de un número (iterativo)")
+
     opcion = input("Introduce el número de la opción: ")
     return opcion
 
@@ -40,12 +40,7 @@ def ejecutar_operacion(opcion):
             return dividir(a, b)
         elif opcion == "5":
             return "Salir"
-        elif opcion == "6":
-            # Calcular factorial
-            numero = int(input("Ingrese un número para calcular su factorial: "))
-            resultado = factorial_iterativo(numero)
-            return f"El factorial de {numero} es: {resultado}"
         else:
             return "Opción no válida"
     except ValueError:
-        return "Error: Los valores deben ser numéricos (int o float)."
+        return "Error: Ambos valores deben ser numéricos (int o float)."
