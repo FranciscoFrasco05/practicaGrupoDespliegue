@@ -9,9 +9,9 @@ def mostrar_menu():
     print("4 - Dividir")
     print("5 - Salir")
     print("6 - Calcular el factorial de un número (iterativo)")
-    print("7 - Calcular el factorial de un número (recursivo)")
-    print("8 - Calcular el Fibonacci de un número")
 
+    print("8 - Calcular el Fibonacci de un número")
+    print("7 - Calcular el factorial de un número (recursivo)")
     opcion = input("Introduce el número de la opción: ")
     return opcion
 
