@@ -1,5 +1,5 @@
 # menu.py
-from operaciones import sumar, restar, multiplicar, dividir, factorial_iterativo, factorial_recursivo
+from operaciones import sumar, restar, multiplicar, dividir, factorial_iterativo, factorial_recursivo, fibonacci
 
 def mostrar_menu():
     print("Selecciona una opción:")
@@ -9,6 +9,8 @@ def mostrar_menu():
     print("4 - Dividir")
     print("5 - Salir")
     print("6 - Calcular el factorial de un número (iterativo)")
+
+    print("8 - Calcular el Fibonacci de un número")
     opcion = input("Introduce el número de la opción: ")
     return opcion
 
@@ -49,6 +51,11 @@ def ejecutar_operacion(opcion):
             numero = int(input("Ingrese un número para calcular su factorial (recursivo): "))
             resultado = factorial_recursivo(numero)
             return f"El factorial de {numero} es: {resultado}"
+        elif opcion == 8:
+            num = int(input("Introduce un número para calcular el Fibonacci: "))
+            resultado = fibonacci(num)
+            return f"El Fibonacci de {num} es {resultado}"
+        
         else:
             return "Opción no válida"
     except ValueError:
