@@ -47,3 +47,22 @@ def dividir(a, b):
         resultado = -resultado
     
     return resultado
+def factorial_recursivo(n):
+    """
+    Calcula el factorial de un número de forma recursiva.
+    
+    Args:
+        n (int): Número para calcular el factorial.
+        
+    Returns:
+        int: Factorial del número, o un mensaje de error si no es válido.
+    """
+    if not isinstance(n, int) or n < 0:
+        return "Error: El número debe ser un entero no negativo"
+    
+    def calcular_factorial(m):
+        if m <= 1:
+            return 1
+        return m * calcular_factorial(m - 1)
+    
+    return calcular_factorial(n)
