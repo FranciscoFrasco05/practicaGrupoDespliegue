@@ -9,6 +9,7 @@ def mostrar_menu():
     print("4 - Dividir")
     print("5 - Salir")
     print("6 - Calcular el factorial de un número (iterativo)")
+    print("7 - Calcular el factorial de un número (recursivo)")
     opcion = input("Introduce el número de la opción: ")
     return opcion
 
@@ -41,11 +42,12 @@ def ejecutar_operacion(opcion):
         elif opcion == "5":
             return "Salir"
         elif opcion == "6":
-            # Calcular factorial
-            numero = int(input("Ingrese un número para calcular su factorial: "))
+            # Calcular factorial iterativo
+            numero = int(input("Ingrese un número para calcular su factorial (iterativo): "))
             resultado = factorial_iterativo(numero)
             return f"El factorial de {numero} es: {resultado}"
-        elif opcion == "6":
+        elif opcion == "7":
+            # Calcular factorial recursivo
             numero = int(input("Ingrese un número para calcular su factorial (recursivo): "))
             resultado = factorial_recursivo(numero)
             return f"El factorial de {numero} es: {resultado}"
